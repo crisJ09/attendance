@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Class Attendance System</title>
+    <meta name="description" content="Administrator panel for managing teachers and students">
+    <meta name="keywords" content="admin, management, teachers, students, accounts">
+    <meta property="og:title" content="Admin Panel - Class Attendance System">
+    <meta property="og:description" content="Administrator panel for managing teachers and students">
+    <meta name="twitter:title" content="Admin Panel - Class Attendance System">
+    <meta name="twitter:description" content="Administrator panel for managing teachers and students">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @layer theme {
+        :root {
+            --primary-color: #7c3aed;
+            --secondary-color: #f1f5f9;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --sidebar-width: 280px;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-primary);
+        }
+    }
+
+    @layer components {
+        .btn {
+            @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+        }
+        
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white hover:bg-violet-800 focus:ring-[var(--primary-color)];
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-slate-200 focus:ring-slate-300;
+        }
+        
+        .btn-success {
+            @apply bg-[var(--accent-color)] text-white hover:bg-green-600 focus:ring-[var(--accent-color)];
+        }
+        
+        .btn-danger {
+            @apply bg-[var(--danger-color)] text-white hover:bg-red-600 focus:ring-[var(--danger-color)];
+        }
+
+        .card {
+            @apply bg-white rounded-xl shadow-sm border border-[var(--border-color)] p-6;
+        }
+
+        .input-field {
+            @apply w-full px-4 py-2 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+
+        .sidebar-item {
+            @apply flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer transition-all duration-200 hover:bg-[var(--secondary-color)];
+        }
+
+        .sidebar-item.active {
+            @apply bg-[var(--primary-color)] text-white;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel" src="components/AdminLogin.js"></script>
+    <script type="text/babel" src="components/AdminDashboard.js"></script>
+    <script type="text/babel" src="components/TeacherManager.js"></script>
+    <script type="text/babel" src="components/StudentManager.js"></script>
+    <script type="text/babel" src="components/SessionManager.js"></script>
+    <script type="text/babel" src="components/SessionForm.js"></script>
+    <script type="text/babel" src="components/AccountForm.js"></script>
+    <script type="text/babel" src="utils/storage.js"></script>
+    <script type="text/babel" src="admin-app.js"></script>
+
+</body>
+
+</html>

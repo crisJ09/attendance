@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Management - Class Attendance System</title>
+    <meta name="description" content="Grade management system for quizzes, activities, and exams">
+    <meta name="keywords" content="grading, grades, quiz, activity, exam, education">
+    <meta property="og:title" content="Grade Management System">
+    <meta property="og:description" content="Grade management system for quizzes, activities, and exams">
+    <meta name="twitter:title" content="Grade Management System">
+    <meta name="twitter:description" content="Grade management system for quizzes, activities, and exams">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f1f5f9;
+            --accent-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --sidebar-width: 280px;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-primary);
+        }
+    }
+
+    @layer components {
+        .btn {
+            @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+        }
+        
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white hover:bg-blue-700 focus:ring-[var(--primary-color)];
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-slate-200 focus:ring-slate-300;
+        }
+
+        .card {
+            @apply bg-white rounded-xl shadow-sm border border-[var(--border-color)] p-6;
+        }
+
+        .input-field {
+            @apply w-full px-4 py-2 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel" src="components/GradingHeader.js"></script>
+    <script type="text/babel" src="components/ClassSelector.js"></script>
+    <script type="text/babel" src="components/GradingSystem.js"></script>
+    <script type="text/babel" src="utils/storage.js"></script>
+    <script type="text/babel" src="grading-app.js"></script>
+
+</body>
+
+</html>
