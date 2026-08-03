@@ -1,0 +1,172 @@
+[
+  {
+    "name": "teacher",
+    "fields": [
+      {
+        "name": "email",
+        "type": "text",
+        "description": "Teacher email address for login",
+        "options": null
+      },
+      {
+        "name": "password",
+        "type": "text",
+        "description": "Teacher password",
+        "options": null
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "description": "Teacher full name",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "class",
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "description": "Name of the class",
+        "options": null
+      },
+      {
+        "name": "subject",
+        "type": "text",
+        "description": "Subject name",
+        "options": null
+      },
+      {
+        "name": "grade",
+        "type": "text",
+        "description": "Year level",
+        "options": null
+      },
+      {
+        "name": "campus",
+        "type": "text",
+        "description": "Campus branch",
+        "options": null
+      },
+      {
+        "name": "schoolYear",
+        "type": "text",
+        "description": "Academic school year",
+        "options": null
+      },
+      {
+        "name": "semester",
+        "type": "text",
+        "description": "Academic semester",
+        "options": null
+      },
+      {
+        "name": "schedule",
+        "type": "text",
+        "description": "JSON stringified schedule object",
+        "options": null
+      },
+      {
+        "name": "joinCode",
+        "type": "text",
+        "description": "Unique 6-digit join code",
+        "options": null
+      },
+      {
+        "name": "teacherEmail",
+        "type": "text",
+        "description": "Owner teacher email",
+        "options": null
+      },
+      {
+        "name": "isArchived",
+        "type": "bool",
+        "description": "Whether the class is in the archive",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "student",
+    "fields": [
+      {
+        "name": "classId",
+        "type": "text",
+        "description": "ID of the class joined",
+        "options": null
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "description": "Student full name",
+        "options": null
+      },
+      {
+        "name": "studentId",
+        "type": "text",
+        "description": "Normalized Student Institutional ID",
+        "options": null
+      },
+      {
+        "name": "email",
+        "type": "text",
+        "description": "Student email address",
+        "options": null
+      },
+      {
+        "name": "joinDate",
+        "type": "datetime",
+        "description": "When the student enrolled",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "attendance",
+    "fields": [
+      {
+        "name": "classId",
+        "type": "text",
+        "description": "Class ID",
+        "options": null
+      },
+      {
+        "name": "studentId",
+        "type": "text",
+        "description": "Student ID",
+        "options": null
+      },
+      {
+        "name": "date",
+        "type": "text",
+        "description": "Date of record (YYYY-MM-DD)",
+        "options": null
+      },
+      {
+        "name": "session",
+        "type": "text",
+        "description": "Session ID or Type",
+        "options": null
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "description": "present, late, absent, or excuse",
+        "options": null
+      },
+      {
+        "name": "method",
+        "type": "text",
+        "description": "Marking method (qr, manual, face)",
+        "options": null
+      },
+      {
+        "name": "timestamp",
+        "type": "datetime",
+        "description": "Actual check-in time",
+        "options": null
+      }
+    ]
+  }
+]
